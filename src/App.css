@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.photo-stack {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo {
+  margin: 10px;
+     /* Limits the width to the parent container's width */
+    max-height: 400px;  /* Limits the height similarly */
+    width: auto;       /* Allows natural width */
+    height: auto;      /* Allows natural height */
+  transition: transform 0.2s; /* Smooth transform effect on hover */
+}
+
+.photo:hover {
+  transform: scale(1.05); /* Slightly enlarge the photos on hover */
+}
+
+.full-screen-background {
+  height: 100vh;  /* 100% of the viewport height */
+  width: 100vw;   /* 100% of the viewport width */
+  background: url('img3575.jpg') no-repeat 0px -500px fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;  /* Centers the title vertically */
+  justify-content: flex-start;  /* Aligns the title to the left */
+  cursor: pointer;  /* Makes the mouse cursor indicate clickable area */
+}
+
+.centered-title {
+  margin-left: 50px;  /* 50 pixels from the left */
+  font-size: 2em;  /* Example font size, adjust based on your design */
+  color: white;  /* Assuming a dark background image */
+  font-family:'Ibarra Real Nova', sans-seif;
+  font-size:3rem;
+}
+
+.photo-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;   /* Full viewport height */
+  width: 100vw;    /* Full viewport width */
+  text-align: center;
+  background-color: #fff; /* Optional: any color or leave this for default */
+  font-family:'Nunito', sans-serif;
+}
+
+.photo-viewer img {
+  max-height: 75vh;  /* Maximum height for the image */
+  width: auto;       /* Maintain the aspect ratio */
+  max-width: 100%;   /* Limit width to avoid overflow */
+  object-fit: contain; /* Ensures the image is scaled correctly within constraints */
+}
+
+.page-number, .info-link {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #000; /* White color for visibility on darker backgrounds */
+  cursor: pointer; /* Indicates the element is clickable */
+  font-family:'Red Hat Display', sans-serif;
+  /* border: 1px solid #eee;
+  border-radius: .85rem;
+  padding:10px;
+  text-decoration:underline;
+  background:#eee; */
+
+}
+
+.info-link:hover, .page-number:hover {
+  font-family:'Red Hat Display', sans-serif;
+  color:#999;
+}
+
+.grid-viewer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+  justify-items: space-between;
+  padding: 10px;
+  align-items: start;
+  padding:10% 10%;
+}
+
+.grid-viewer img {
+  width: auto;
+  height: auto;
+  max-width: 100%;  /* Ensures image does not overflow its grid cell */
+  max-height: 100vh;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+
+}
+
+.grid-viewer img:hover {
+  transform: scale(1.1); /* scale up image to 110% of its original size on hover */
+}
+
+.grid-cell {
+  display: flex;
+  align-items: center;  /* Centers content vertically */
+  justify-content: center;  /* Centers content horizontally */
+  height: 100%;  /* Optional: Specify a fixed height if needed */
+}
+
+.info-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark grey text */
+  cursor: pointer;
+}
+
+.info-page h1 {
+  margin: 0.5em 0;
+  font-size: 2em; /* 32px if the user's default font-size is 16px */
+  color: #000; /* Bootstrap primary blue for example */
+}
+
+.info-page p {
+  font-size: 1.5em;
+  color: #666; /* Lighter grey text */
+}
